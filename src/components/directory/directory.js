@@ -38,19 +38,14 @@ const sections = [
   }
 ];
 
-const Directory = ({ title }) => {
+const Directory = () => {
   const [section] = useState(sections);
   
   return (
-    <div className='dir-menu'>
-      {
-        section.map(({id, ...otherSectionProps}) => (
-          <MenuItem 
-            key={id} 
-            {...otherSectionProps}
-          />
-        ))
-      }
+    <div className='directory-menu'>
+      {section.map(({ id, ...otherSectionProps }) => (
+        <MenuItem key={id} {...otherSectionProps} />
+      ))}
     </div>
   );
 };
