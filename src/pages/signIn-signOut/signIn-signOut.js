@@ -5,10 +5,9 @@ import SignUp from './../../components/sign-up/signUp';
 
 
 const SignInSignOut = () => (
-  <div className='sign-in-sign-out'>
-  <SignIn />
-  <SignUp />
+  <div className='sign-in-and-sign-up'>
+    <SignIn />
+    <SignUp />
   </div>
 );
-
 export default SignInSignOut;

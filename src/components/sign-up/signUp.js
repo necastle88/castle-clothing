@@ -5,11 +5,15 @@ import CustomButton from '../../components/custom-button/CustomButton';
 import './signUp.scss';
 
 class SignUp extends React.Component {
-  state = {
-    displayName: '',
-    email: '',
-    password: '',
-    confirmPassword: ''
+  constructor() {
+    super();
+
+    this.state = {
+      displayName: '',
+      email: '',
+      password: '',
+      confirmPassword: ''
+    };
   }
 
   handleSubmit = async event => {
