@@ -1,6 +1,6 @@
 import React from 'react';
 import './collection.styles.scss';
-import CustomButtom from '../custom-button/CustomButton';
+import CustomButton from '../custom-button/customButton';
 import { connect } from 'react-redux';
 import { addItem } from '../../redux/cart/cart.actions';
 
@@ -18,7 +18,7 @@ const CollectionItem = ({ item, addItem }) => {
     <span className='name'>{name}</span>
     <span className='price'>{price}</span>
   </div>
-  <CustomButtom onClick={() => addItem(item)} inverted>ADD TO CART</CustomButtom>
+  <CustomButton onClick={() => addItem(item)} inverted>ADD TO CART</CustomButton>
 </div>
   )};
 
