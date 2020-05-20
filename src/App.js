@@ -13,8 +13,6 @@ import { auth, createUserProfileDoc } from "./firebase/fireBase.utils";
 import { selectCurrentUser } from './redux/user/user.selector';
 import { createStructuredSelector } from 'reselect';
 
-
-
 import "./App.css";
 
 class App extends React.Component {
