@@ -11,7 +11,7 @@ import { selectCurrentUser } from '../../redux/user/user.selector';
 import { signOutStart } from '../../redux/user/user.actions'
 import { 
   HeaderContainer, 
-  OptionDiv, 
+ 
   OptionsContainer,
   OptionLink,
   LogoContainer
@@ -23,39 +23,31 @@ const Header = ({ currentUser, hidden, signOutStart }) => (
       <Logo className='logo' />
     </LogoContainer>
     <OptionsContainer>
-      <OptionLink to='/shop'>
-        SHOP
-      </OptionLink>
-      <OptionLink to='/shop'>
-        CONTACT
-      </OptionLink>
+      <OptionLink to='/shop'>SHOP</OptionLink>
+      <OptionLink to='/shop'>CONTACT</OptionLink>
       {currentUser ? (
-        <OptionDiv onClick={signOutStart}>
+        <OptionLink as='div' onClick={signOutStart}>
           SIGN OUT
-        </OptionDiv>
-      ) : (
-        <OptionLink to='/signin'>
-          SIGN IN
         </OptionLink>
+      ) : (
+        <OptionLink to='/signin'>SIGN IN</OptionLink>
       )}
       <CartIcon />
     </OptionsContainer>
-    {
-      hidden ? null : <CartDropdown />
-    }
+    {hidden ? null : <CartDropdown />}
   </HeaderContainer>
 );
-
-const mapDispatchToProps = dispatch => ({
-  signOutStart: () => dispatch(signOutStart())
-}) 
 
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
   hidden: selectCartHidden
-})
+});
+
+const mapDispatchToProps = dispatch => ({
+  signOutStart: () => dispatch(signOutStart())
+});
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-  )(Header);
+)(Header);
