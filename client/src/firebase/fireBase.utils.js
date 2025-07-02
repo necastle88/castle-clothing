@@ -3,7 +3,7 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const config = {
-  apiKey: "AIzaSyCsWLddb0h4pveRNCP6S_P9vqzMF0AWUtQ",
+  apiKey: "{YOUR KEY HERE}",
   authDomain: "castle-clothing-db.firebaseapp.com",
   databaseURL: "https://castle-clothing-db.firebaseio.com",
   projectId: "castle-clothing-db",
